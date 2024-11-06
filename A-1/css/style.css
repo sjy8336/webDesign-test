@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* base */
+*{margin: 0; padding: 0;}
+ol, li {list-style: none;}
+body {background-color: #fff;}
+a {text-decoration: none; color: inherit;}
+img {vertical-align: top;}
+/* style */
+#wrap {width: 1200px; margin: 0 auto;}
+header {height: 100px; display: flex; justify-content: space-between; align-items: center;}
+header nav .gnb {display: flex; position: relative; z-index: 100;}
+header nav .gnb > li {width: 100px; height: 30px;}
+header nav .gnb > li > a {
+    display: block;
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 2px solid #938961;
+    font-weight: 600;
+}
+header nav .gnb > li:hover > a {background-color: #938961; color: #fff;}
+header nav .gnb > li .sub > li > a {
+    display: block;
+    width: 100%; height: 25px;
+    text-align: center; line-height: 25px;
+    box-sizing: border-box;
+    font-size: 0.88rem;
+    background-color: #f0eddf;
+}
+header nav .gnb > li .sub > li:hover > a {background-color: #938961; color: #fff;}
+#slider {height: 300px; overflow: hidden;}
+#slider .s_box {height: 900px;}
+#contents {height: 200px; display: flex;}
+#contents > div {width: 400px; height: 200px;}
+#contents .tab {display: flex; position: relative;}
+#contents .tab > div.active p {background-color: #938961; color: #fff;}
+#contents .tab > div.active ul {z-index: 1;}
+#contents .tab p {
+    width: 100px; height: 30px;
+    margin-top: 5px;
+    line-height: 30px;
+    border: 1px solid #938961;
+    text-align: center;
+    font-weight: 600;
+    color: #938961;
+    border-bottom: none;
+    cursor: pointer;
+}
+#contents .tab ul {
+    width: 380px; height: 160px; 
+    border-top: 1px solid #938961; 
+    border-bottom: 1px solid #938961; 
+    padding: 10px; 
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+}
+#contents .tab ul li a {font-size: 0.88rem;}
+#contents .tab .notice ul li:nth-child(2n) {background-color: #f0eddf;}
+#contents .tab .notice ul li a {line-height: 34px; display: flex; justify-content: space-between;}
+#contents .tab .notice ul li a span {color: #999;}
+#contents .tab .gallery ul {display: flex; justify-content: space-between; align-items: center;}
+#contents .tab .gallery ul li:hover {opacity: .8;}
+footer {height: 100px; display: flex; justify-content: space-between; align-items: center; background-color: #887e60;}
+footer .flogo {width: 200px;}
+footer .copy p {width: 800px; color: #ccc; font-size: 0.88rem; text-align: center;}
+footer .fsns {width: 200px; padding: 20px; display: flex; justify-content: space-between;}
+.pop {
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.pop.active {display: block;}
+.pop .tit {text-align: center; font-size: 18px; font-weight: 700;}
+.pop .txt {text-align: center; margin: 20px 0 0 ;}
+.pop .btn {
+    width: 100px; height: 30px; 
+    background-color: #938961; 
+    color: #fff; 
+    cursor: pointer; 
+    position: absolute; 
+    right: 20px; bottom: 20px;
+    text-align: center;
+    line-height: 30px;
+}
