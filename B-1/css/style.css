@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* base */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{vertical-align: top;}
+body{background-color: #fff; color: #333;}
+/* style */
+#wrap {width: 1200px; margin: 0 auto;}
+header {height: 100px; display: flex; justify-content: space-between; align-items: center;}
+header nav .gnb {display: flex;}
+header nav .gnb > li > a {
+    display: block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+}
+header nav .gnb > li > a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0; bottom: 0;
+    background-color: #244ec7;
+    transition: all .4s;
+}
+header nav .gnb > li:hover > a::after {width: 100%;}
+header nav .gnb > li .sub {
+    height: 120px;
+    position: absolute;
+    background-color: #e8eeff;
+    z-index: 999;
+}
+header nav .gnb > li .sub li a {
+    display: block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+header nav .gnb > li .sub li a:hover {background-color: #869feb;}
+#slide {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+#slide .slidebox {width: 3600px; height: 300px; display: flex;}
+#contents {display: flex;}
+#contents > div {width: 400px; height: 200px;}
+#contents .tab {display: flex; position: relative;}
+#contents .tab div p {
+    margin: 10px 0 0;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px; 
+    font-weight: 700; 
+    background-color: #869feb;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+}
+#contents .tab div.on p {background-color: #244ec7;}
+#contents .tab div ul {
+    width: 380px; height: 150px;
+    border-top: 2px solid #244ec7; 
+    border-bottom: 2px solid #244ec7; 
+    background-color: #fff;
+    position: absolute; 
+    left: 0;
+}
+#contents .tab div.on ul {z-index: 1;}
+#contents .tab div ul li {padding: 8px 0;}
+#contents .tab .notice ul li {border-bottom: 1px solid #efefef;}
+#contents .tab .notice ul li:last-child {border-bottom: none;}
+#contents .tab .notice ul li a {display: flex; justify-content: space-between; padding: 0 15px;}
+#contents .tab .notice ul li a span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #aaa;
+}
+#contents .tab .gallery ul {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 15px;
+}
+footer {height: 100px; display: flex; align-items: center;}
+footer .fleft {width: 800px;}
+footer .fleft .fnav {height: 50px;}
+footer .fleft .fnav ul {display: flex; justify-content: center;}
+footer .fleft .fnav ul li {margin: 0 0 0 15px;}
+footer .fleft .fnav ul li:first-child {margin: 0;}
+footer .fleft .fnav ul li a {
+    display: block;
+    width: 100%; height: 100%;
+    line-height: 50px;
+}
+footer .fleft .copy {height: 50px; line-height: 50px; text-align: center;}
+#popup {
+    width: 450px; 
+    height: 300px; 
+    border: 1px solid #333;
+    background-color: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+#popup h2 {padding: 10px 5px; border-bottom: 1px solid #333;}
+#popup p {padding: 10px 5px;}
+#popup button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px; right: 5px;
+}
