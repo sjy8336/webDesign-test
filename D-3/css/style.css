@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* base */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {vertical-align: top;}
+body {background-color: #fff; color: #333;}
+/* style */
+#wrap {width: 100%; height: 970px;}
+#cont {display: flex;}
+#cont aside {height: 850px; width: 200px; background-color: cornsilk;}
+aside .logo {width: 100%; height: 100px; padding: 30px 0;}
+/* aside nav .sub_bg {width: calc();} */
+aside nav .gnb {width: 180px; margin: 0 auto;}
+aside nav .gnb > li {position: relative;}
+aside nav .gnb > li > a {
+    display: block;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #333;
+    border-bottom: none;
+}
+aside nav .gnb > li:last-child > a {border-bottom: 1px solid #333;}
+aside nav .gnb > li:hover > a {background-color: peru; color: antiquewhite;}
+aside nav .gnb > li .sub {
+    position: absolute;
+    top: 0;
+    left: 180px;
+    display: flex;
+    z-index: 99;
+}
+aside nav .gnb > li .sub li a {
+    display: block;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+aside nav .gnb > li .sub li:hover a {background-color: peru; color: antiquewhite;}
+aside nav .sub_bg {
+    background: rgba(255, 255, 255, .4);
+    width: calc(100% - 190px);
+    height: 120px;
+    position: absolute;
+    top: 100px; left: 190px;
+    z-index: 88;
+}
+aside .logo a {display: block; width: 200px; height: 40px; background-color: #fff;}
+#cont .contents {width: calc(100% - 200px); height: 850px; background-color: antiquewhite;}
+footer {width: 100%; height: 120px; background-color: burlywood;}
